@@ -43,7 +43,7 @@ type DagBuilderHelper struct {
 	// the balanced builder). It is assumed that the `DagBuilderHelper`
 	// is not reused to construct another DAG, but a new one (with a
 	// zero `offset`) is created.
-	offset uint64
+	Offset uint64
 }
 
 // DagBuilderParams wraps configuration options to create a DagBuilderHelper
