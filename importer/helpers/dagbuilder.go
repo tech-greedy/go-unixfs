@@ -43,7 +43,7 @@ type DagBuilderHelper struct {
 	// the balanced builder). It is assumed that the `DagBuilderHelper`
 	// is not reused to construct another DAG, but a new one (with a
 	// zero `offset`) is created.
-	Offset uint64
+	offset uint64
 }
 
 // DagBuilderParams wraps configuration options to create a DagBuilderHelper
@@ -65,6 +65,9 @@ type DagBuilderParams struct {
 	// NoCopy signals to the chunker that it should track fileinfo for
 	// filestore adds
 	NoCopy bool
+}
+func (db *DagBuilderHelper) SetOffset(o uint64) {
+	db.offset = o
 }
 
 // New generates a new DagBuilderHelper from the given params and a given
